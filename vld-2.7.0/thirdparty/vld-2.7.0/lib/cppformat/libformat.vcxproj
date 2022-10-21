@@ -44,7 +44,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FMT_USE_FILE_DESCRIPTORS=1;GTEST_LANG_CXX11=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FMT_USE_FILE_DESCRIPTORS=1;GTEST_LANG_CXX11=0;</PreprocessorDefinitions>
       <Optimization>Disabled</Optimization>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -55,7 +55,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FMT_USE_FILE_DESCRIPTORS=1;GTEST_LANG_CXX11=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FMT_USE_FILE_DESCRIPTORS=1;GTEST_LANG_CXX11=0;</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
