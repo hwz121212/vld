@@ -67,7 +67,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 int WINAPI _tWinMain(__in HINSTANCE hInstance,
     __in_opt HINSTANCE hPrevInstance,
-    __in LPWSTR lpCmdLine,
+    __in LPTSTR  lpCmdLine,
     __in int nShowCmd)
 {
     return Test();
