@@ -68,9 +68,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\vld-2.7.0\src;$(SolutionDir)thirdparty\gtest-1.7.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\vld-2.7.0\include;$(SolutionDir)thirdparty\gtest-1.7.0\include</AdditionalIncludeDirectories>
     </ClCompile>
-    
     <Link>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
@@ -93,9 +92,8 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\vld-2.7.0\src;$(SolutionDir)thirdparty\gtest-1.7.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\vld-2.7.0\include;$(SolutionDir)thirdparty\gtest-1.7.0\include</AdditionalIncludeDirectories>
     </ClCompile>
-    
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
