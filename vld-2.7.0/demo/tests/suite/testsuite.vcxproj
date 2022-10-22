@@ -57,7 +57,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <StringPooling>false</StringPooling>
-      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\vld-2.7.0\src;$(SolutionDir)thirdparty\gtest-1.7.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\vld-2.7.0\include;$(SolutionDir)thirdparty\gtest-1.7.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -79,7 +79,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <StringPooling>true</StringPooling>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\vld-2.7.0\src;$(SolutionDir)thirdparty\gtest-1.7.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\vld-2.7.0\include;$(SolutionDir)thirdparty\gtest-1.7.0\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <OptimizeReferences>true</OptimizeReferences>
