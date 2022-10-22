@@ -52,7 +52,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;WIN64;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GTEST_LINKED_AS_SHARED_LIBRARY;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;WIN64;</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <FunctionLevelLinking>false</FunctionLevelLinking>
@@ -63,7 +63,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gtest.lib</AdditionalDependencies>
+      <AdditionalDependencies>gtest.lib;Ole32.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command />
@@ -75,7 +75,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <Optimization>Full</Optimization>
-      <PreprocessorDefinitions>_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;VLD_FORCE_ENABLE;NDEBUG;WIN64;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GTEST_LINKED_AS_SHARED_LIBRARY;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;VLD_FORCE_ENABLE;NDEBUG;WIN64;</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <StringPooling>true</StringPooling>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -87,7 +87,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>gtest.lib</AdditionalDependencies>
+      <AdditionalDependencies>gtest.lib;Ole32.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command />
