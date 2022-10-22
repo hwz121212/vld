@@ -15,93 +15,88 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="callstack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ntapi.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="utility.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="vld.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="vldapi.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="vldheap.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="dllspatches.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="vld_hooks.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="callstack.h">
+    <ClInclude Include="include\callstack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="crtmfcpatch.h">
+    <ClInclude Include="include\criticalsection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="map.h">
+    <ClInclude Include="include\crtmfcpatch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ntapi.h">
+    <ClInclude Include="include\loaderlock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="include\map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="set.h">
+    <ClInclude Include="include\ntapi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="include\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="tree.h">
+    <ClInclude Include="include\set.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="utility.h">
+    <ClInclude Include="include\stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vld.h">
+    <ClInclude Include="include\tree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vldheap.h">
+    <ClInclude Include="include\utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vldint.h">
+    <ClInclude Include="include\version.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vld_def.h">
+    <ClInclude Include="include\vld.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="criticalsection.h">
+    <ClInclude Include="include\vld_def.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vldallocator.h">
+    <ClInclude Include="include\vldallocator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dbghelp.h">
+    <ClInclude Include="include\vldheap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="version.h">
+    <ClInclude Include="include\vldint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dbghelp_.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="vld.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="vld.natvis" />
+    <ClCompile Include="src\callstack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dllspatches.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ntapi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vld_hooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vldapi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vldheap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

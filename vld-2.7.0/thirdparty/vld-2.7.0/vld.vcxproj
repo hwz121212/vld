@@ -45,7 +45,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>..\lib;$(SolutionDir)include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include;$(SolutionDir)thirdparty\cppformat</AdditionalIncludeDirectories>
       <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
@@ -61,7 +61,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_WINDLL;_UNICODE;UNICODE;_DEBUG;_USRDLL;WIN64;_WIN32_WINNT=0x0502;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINAPI_PARTITION_DESKTOP;_WINDLL;_UNICODE;UNICODE;_DEBUG;_USRDLL;WIN64;_WIN32_WINNT=0x0502;</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level4</WarningLevel>
@@ -75,7 +75,8 @@
       <ImportLibrary>$(SolutionDir)lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
     <Manifest>
-      <AdditionalManifestFiles>vld.dll.dependency.x64.manifest</AdditionalManifestFiles>
+      <AdditionalManifestFiles>
+      </AdditionalManifestFiles>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -83,7 +84,7 @@
       <Optimization>Full</Optimization>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <PreprocessorDefinitions>_WINDLL;_UNICODE;UNICODE;NDEBUG;_USRDLL;WIN64;_WIN32_WINNT=0x0502;</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINAPI_PARTITION_DESKTOP;_WINDLL;_UNICODE;UNICODE;NDEBUG;_USRDLL;WIN64;_WIN32_WINNT=0x0502;</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <BufferSecurityCheck>false</BufferSecurityCheck>
@@ -102,48 +103,43 @@
       <ImportLibrary>$(SolutionDir)lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
     <Manifest>
-      <AdditionalManifestFiles>vld.dll.dependency.x64.manifest</AdditionalManifestFiles>
+      <AdditionalManifestFiles>
+      </AdditionalManifestFiles>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="callstack.cpp" />
-    <ClCompile Include="dllspatches.cpp" />
-    <ClCompile Include="ntapi.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader>Create</PrecompiledHeader>
+    <ClInclude Include="include\callstack.h" />
+    <ClInclude Include="include\criticalsection.h" />
+    <ClInclude Include="include\crtmfcpatch.h" />
+    <ClInclude Include="include\dbghelp_.h" />
+    <ClInclude Include="include\loaderlock.h" />
+    <ClInclude Include="include\map.h" />
+    <ClInclude Include="include\ntapi.h" />
+    <ClInclude Include="include\resource.h" />
+    <ClInclude Include="include\set.h" />
+    <ClInclude Include="include\stdafx.h" />
+    <ClInclude Include="include\tree.h" />
+    <ClInclude Include="include\utility.h" />
+    <ClInclude Include="include\version.h" />
+    <ClInclude Include="include\vld.h" />
+    <ClInclude Include="include\vldallocator.h" />
+    <ClInclude Include="include\vldheap.h" />
+    <ClInclude Include="include\vldint.h" />
+    <ClInclude Include="include\vld_def.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\callstack.cpp" />
+    <ClCompile Include="src\dllspatches.cpp" />
+    <ClCompile Include="src\ntapi.cpp" />
+    <ClCompile Include="src\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="utility.cpp" />
-    <ClCompile Include="vld.cpp" />
-    <ClCompile Include="vldapi.cpp" />
-    <ClCompile Include="vldheap.cpp" />
-    <ClCompile Include="vld_hooks.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="callstack.h" />
-    <ClInclude Include="criticalsection.h" />
-    <ClInclude Include="crtmfcpatch.h" />
-    <ClInclude Include="dbghelp.h" />
-    <ClInclude Include="map.h" />
-    <ClInclude Include="ntapi.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="set.h" />
-    <ClInclude Include="version.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="tree.h" />
-    <ClInclude Include="utility.h" />
-    <ClInclude Include="vld.h" />
-    <ClInclude Include="vldallocator.h" />
-    <ClInclude Include="vldheap.h" />
-    <ClInclude Include="vldint.h" />
-    <ClInclude Include="vld_def.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="vld.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Natvis Include="vld.natvis" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="src\utility.cpp" />
+    <ClCompile Include="src\vld.cpp" />
+    <ClCompile Include="src\vldapi.cpp" />
+    <ClCompile Include="src\vldheap.cpp" />
+    <ClCompile Include="src\vld_hooks.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -27,7 +27,7 @@
 #include "utility.h"    // Provides various utility functions.
 #include "vldheap.h"    // Provides internal new and delete operators.
 #include "vldint.h"     // Provides access to VLD internals.
-#include "cppformat\format.h"
+#include "format.h"
 
 // Imported global variables.
 extern HANDLE             g_currentProcess;
